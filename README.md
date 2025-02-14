@@ -1,4 +1,5 @@
 # Snake Game
+![snake-game](https://github.com/user-attachments/assets/1c9d1287-4a4d-4398-87ff-62a96a462960)
 
 A modern take on the classic Snake game with special powers and obstacles, built using vanilla JavaScript and HTML5 Canvas.
 

@@ -9,7 +9,7 @@ const GRID_SIZE = 20;
 const GAME_WIDTH = 600;
 const GAME_HEIGHT = 600;
 const INITIAL_SNAKE_LENGTH = 4;
-let gameSpeed = 100; // Milliseconds between updates
+let gameSpeed = 150; // Slower initial speed
 
 // Set canvas size
 canvas.width = GAME_WIDTH;
@@ -64,8 +64,9 @@ function initGame() {
     score = 0;
     updateScore();
     
-    // Reset game speed
-    gameSpeed = 100;
+    // Reset game speed: increase the delay by ~67% (from 100ms to ~167ms)
+    // This results in a reduction of the snake's speed by 40% (from 10 moves/sec to ~6 moves/sec)
+    gameSpeed = 167; 
     clearInterval(gameInterval);
     gameInterval = setInterval(gameLoop, gameSpeed);
 }
